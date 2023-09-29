@@ -19,7 +19,8 @@ class CoursesContainer extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         //CourseDetails.showCourseDetails(context, index);
-        CourseDetails(index: index);
+        //CourseDetails(index: index);
+        CourseDetails.showAlertDialog(context, index);
       },
       child: AspectRatio(
         aspectRatio: 2.35 / 4,
