@@ -70,6 +70,7 @@ class CourseDetails {
               textAlign: TextAlign.center,
             ),
             content: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Container(
                   constraints: BoxConstraints(
