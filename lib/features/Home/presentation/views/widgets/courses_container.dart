@@ -2,7 +2,6 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:creativa_courses_app/constants.dart';
 import 'package:creativa_courses_app/features/Home/presentation/views/widgets/course_details.dart';
 import 'package:flutter/material.dart';
-import 'package:giffy_dialog/giffy_dialog.dart';
 
 class CoursesContainer extends StatelessWidget {
   const CoursesContainer({
@@ -216,8 +215,6 @@ class CoursesContainer extends StatelessWidget {
   }
 
   Future<dynamic> showCourseDetails(BuildContext context, int index) {
-    var size = MediaQuery.of(context).size;
-
     return showDialog(
         context: context,
         builder: (context) {
