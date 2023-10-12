@@ -1,7 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:creativa_courses_app/constants.dart';
-import 'package:creativa_courses_app/features/Home/presentation/views/widgets/course_details.dart';
 import 'package:flutter/material.dart';
+
+import 'course_details.dart';
 
 class CoursesContainer extends StatelessWidget {
   const CoursesContainer({
@@ -24,89 +25,102 @@ class CoursesContainer extends StatelessWidget {
         //showCourseDetails(context, index);
       },
       child: AspectRatio(
-        aspectRatio: 2.35 / 4,
+        aspectRatio:0.7,
         child: Material(
           borderRadius: BorderRadius.circular(16),
-          elevation: 15,
+          elevation:8,
           child: Container(
-            padding: EdgeInsets.zero,
+            padding: const EdgeInsets.all(12),
             // width: 150,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
             ),
-            child: Column(
-              //mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                AspectRatio(
-                  aspectRatio: 4 / 4,
-                  child: Container(
-                    constraints: BoxConstraints(
-                      maxHeight: size.height * 0.4,
-                    ),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      image: DecorationImage(
-                        fit: BoxFit.fill,
-                        image:
-                            AssetImage('assets/images/course${index + 1}.jpg'),
-                      ),
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                //mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  // AspectRatio(
+                  //   aspectRatio: 2/2,
+                  //   child: Container(
+                  //     decoration: BoxDecoration(
+                  //       borderRadius: BorderRadius.circular(16),
+                  //       image: DecorationImage(
+                  //         fit: BoxFit.fill,
+                  //         image:
+                  //             AssetImage('assets/images/course${index + 1}.jpg'),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
+                  Center(
+                    child: ClipRRect(
+                      borderRadius:BorderRadius.circular(16) ,
+                      child: Image.asset('assets/images/course${index + 1}.jpg', height:130 , width: 130,),
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                    right: 4,
-                    left: 4,
-                    top: 7,
+                  const SizedBox(
+                    height: 5,
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  Text(
+                    courseinfo[index]['Title']!,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  AutoSizeText(
+                    courseinfo[index]['Description']!,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      color: Colors.grey,
+                    ),
+                    maxLines:2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        courseinfo[index]['Title']!,
+                        courseinfo[index]['Duration']!,
                         style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                        ),
-                      ),
-                      AutoSizeText(
-                        courseinfo[index]['Description']!,
-                        style: const TextStyle(
-                          fontSize: 14,
                           color: Colors.grey,
+                          fontSize: 10,
                         ),
-                        maxLines: 3,
-                        overflow: TextOverflow.fade,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            courseinfo[index]['Duration']!,
-                            style: const TextStyle(
-                              color: Colors.grey,
-                              fontSize: 10,
-                            ),
+                      TextButton(
+                        onPressed: () {},
+                        child: const Text(
+                          'Enroll',
+                          style: TextStyle(
+                            fontSize: 10,
+                            color: Colors.blue,
+                            decoration: TextDecoration.underline,
+                            decorationColor: Colors.blue,
                           ),
-                          TextButton(
-                            onPressed: () {},
-                            child: const Text(
-                              'Enroll',
-                              style: TextStyle(
-                                fontSize: 10,
-                                color: Colors.blue,
-                                decoration: TextDecoration.underline,
-                                decorationColor: Colors.blue,
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
+                        ),
+                      )
                     ],
                   ),
-                ),
-              ],
+                  // Padding(
+                  //   padding: const EdgeInsets.only(
+                  //     right: 4,
+                  //     left: 4,
+                  //     top: 7,
+                  //   ),
+                  //   child: Column(
+                  //    // crossAxisAlignment: CrossAxisAlignment.start,
+                  //     //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  //     children: [
+                  //
+                  //     ],
+                  //   ),
+                  // ),
+                ],
+              ),
             ),
           ),
         ),

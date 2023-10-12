@@ -1,9 +1,11 @@
-import 'package:creativa_courses_app/features/Home/presentation/views/widgets/category_item.dart';
-import 'package:creativa_courses_app/features/Home/presentation/views/widgets/courses_container.dart';
-import 'package:creativa_courses_app/features/Home/presentation/views/widgets/page_starting.dart';
-import 'package:creativa_courses_app/features/Home/presentation/views/widgets/search_field.dart';
+
 import 'package:creativa_courses_app/constants.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/category_item.dart';
+import '../widgets/courses_container.dart';
+import '../widgets/page_starting.dart';
+import '../widgets/search_field.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -24,9 +26,9 @@ class _HomePageState extends State<HomePage> {
         body: Padding(
           padding: const EdgeInsets.only(
             //bottom: size.height * 0.1,
-            top: 50,
-            right: 30,
-            left: 30,
+            top: 30,
+            right: 16,
+            left: 16,
           ),
           child: SingleChildScrollView(
             child: Column(
@@ -45,16 +47,13 @@ class _HomePageState extends State<HomePage> {
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: categories.length,
-                    itemBuilder: (context, index) => Padding(
-                      padding: const EdgeInsets.all(8),
-                      child: GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            indexing = index;
-                          });
-                        },
-                        child: CategoryItem(indexing: indexing, index: index),
-                      ),
+                    itemBuilder: (context, index) => GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          indexing = index;
+                        });
+                      },
+                      child: CategoryItem(indexing: indexing, index: index),
                     ),
                   ),
                 ),
@@ -72,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                   height: size.height * 0.025,
                 ),
                 SizedBox(
-                  height: size.height * 0.43,
+                  height: size.height * 0.38,
                   child: ListView.builder(
                     padding: EdgeInsets.zero,
                     shrinkWrap: true,
@@ -80,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                     scrollDirection: Axis.horizontal,
                     itemBuilder: ((context, index) {
                       return Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 6.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 16 , vertical: 16),
                         child: CoursesContainer(
                           index: index,
                         ),
@@ -88,6 +87,7 @@ class _HomePageState extends State<HomePage> {
                     }),
                   ),
                 ),
+
                 /*const Text(
                   'Courses',
                   textAlign: TextAlign.start,

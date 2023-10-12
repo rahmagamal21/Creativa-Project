@@ -16,5 +16,6 @@ class MyThemes {
     primaryColor: primaryColor,
     colorScheme: const ColorScheme.light(primary: primary),
     dividerColor: Colors.black,
+
   );
 }

@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 bool isDarkMode = false;
 
 
-Color blue = const Color(0xFF087AEB);
+Color blue = const Color(0xFF2467AB);
+Color textFieldGrey= const Color(0xffbbbeca);
 //const Color(0xff004e9e)
 Color amber = const Color(0xFFF8AF43);
 Color pink = const Color(0xffb41c84);
+
 Color white = Colors.white70;
 
 List<String> categories = [

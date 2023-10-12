@@ -78,6 +78,9 @@ class CourseDetails {
                   ),
                 ),
               ),
+              const SizedBox(
+                height: 15,
+              ),
               Text(
                 courseinfo[index]['Description']!,
                 textAlign: TextAlign.center,
