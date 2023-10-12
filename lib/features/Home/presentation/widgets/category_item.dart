@@ -26,16 +26,14 @@ class CategoryItem extends StatelessWidget {
                       color: Color.fromARGB(255, 248, 175, 67),
                       offset: Offset(0, -5))
                 ],
-                color:Colors.transparent,
+                color: Colors.transparent,
                 decoration: TextDecoration.underline,
                 decorationColor: amber,
                 decorationThickness: 2,
               )
-            :  const TextStyle(
+            : const TextStyle(
                 fontWeight: FontWeight.w600,
-                shadows: [
-                  Shadow(color:Colors.grey, offset: const Offset(0, -5))
-                ],
+                shadows: [Shadow(color: Colors.grey, offset: Offset(0, -5))],
                 color: Colors.transparent,
               ),
       ),

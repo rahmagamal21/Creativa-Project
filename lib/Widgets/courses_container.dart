@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
@@ -19,10 +18,10 @@ class _CoursesContainerState extends State<CoursesContainer> {
     return Container(
       width: size.width * 0.9,
       height: 300,
-      decoration:  BoxDecoration(
+      decoration: const BoxDecoration(
         boxShadow: [
           BoxShadow(
-          color: Colors.white,
+            color: Colors.white,
             spreadRadius: 5,
             blurRadius: 7,
             offset: Offset(0, 3),
@@ -31,13 +30,13 @@ class _CoursesContainerState extends State<CoursesContainer> {
         borderRadius: BorderRadius.all(Radius.circular(16)),
       ),
       child: ListView(
-       physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         children: [
           Stack(
             alignment: AlignmentDirectional.topEnd,
             children: [
               ClipRRect(
-                borderRadius:BorderRadius.circular(8.0),
+                borderRadius: BorderRadius.circular(8.0),
                 child: Image.asset(
                   'assets/course.jpg',
                   fit: BoxFit.fill,
@@ -69,8 +68,8 @@ class _CoursesContainerState extends State<CoursesContainer> {
           const SizedBox(
             height: 5,
           ),
-          Row(
-            children: const [
+          const Row(
+            children: [
               Text(
                 'Digital Marketing',
                 style: TextStyle(
