@@ -1,5 +1,4 @@
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
-import 'package:creativa_courses_app/Widgets/circular_navigation_bar.dart';
 import 'package:creativa_courses_app/constants.dart';
 import 'package:creativa_courses_app/themes.dart';
 import 'package:flutter/material.dart';

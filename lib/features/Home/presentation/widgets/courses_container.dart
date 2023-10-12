@@ -14,7 +14,7 @@ class CoursesContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    //var size = MediaQuery.of(context).size;
     //var icon = Icons.favorite_outline;
     //bool fav = false;
     return GestureDetector(
@@ -25,10 +25,10 @@ class CoursesContainer extends StatelessWidget {
         //showCourseDetails(context, index);
       },
       child: AspectRatio(
-        aspectRatio:0.7,
+        aspectRatio: 0.7,
         child: Material(
           borderRadius: BorderRadius.circular(16),
-          elevation:8,
+          elevation: 8,
           child: Container(
             padding: const EdgeInsets.all(12),
             // width: 150,
@@ -55,8 +55,12 @@ class CoursesContainer extends StatelessWidget {
                   // ),
                   Center(
                     child: ClipRRect(
-                      borderRadius:BorderRadius.circular(16) ,
-                      child: Image.asset('assets/images/course${index + 1}.jpg', height:130 , width: 130,),
+                      borderRadius: BorderRadius.circular(16),
+                      child: Image.asset(
+                        'assets/images/course${index + 1}.jpg',
+                        height: 130,
+                        width: 130,
+                      ),
                     ),
                   ),
                   const SizedBox(
@@ -78,7 +82,7 @@ class CoursesContainer extends StatelessWidget {
                       fontSize: 14,
                       color: Colors.grey,
                     ),
-                    maxLines:2,
+                    maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
                   Row(
