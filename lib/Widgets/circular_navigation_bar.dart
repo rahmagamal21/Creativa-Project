@@ -1,12 +1,12 @@
 import 'package:creativa_courses_app/Pages/about_us_page.dart';
 import 'package:creativa_courses_app/Pages/favourites.dart';
-import 'package:creativa_courses_app/Pages/notifications_page.dart';
 import 'package:creativa_courses_app/features/profile/Presentation/views/profile.dart';
 import 'package:creativa_courses_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:rolling_bottom_bar/rolling_bottom_bar.dart';
 import 'package:rolling_bottom_bar/rolling_bottom_bar_item.dart';
 
+import '../Pages/notifications_page.dart';
 import '../features/Home/presentation/views/home.dart';
 
 class CircularNavigationBar extends StatefulWidget {
@@ -33,7 +33,7 @@ class _CircularNavigationBarState extends State<CircularNavigationBar> {
         children: const <Widget>[
           HomePage(),
           Favourites(),
-          Notifications(),
+          NotificationsPage(),
           ProfilePage(),
           AboutUs(),
         ],

@@ -1,4 +1,5 @@
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
+import 'package:creativa_courses_app/Widgets/submit_button.dart';
 import 'package:creativa_courses_app/constants.dart';
 import 'package:creativa_courses_app/features/profile/Presentation/views/widgets/appbar_widget.dart';
 import 'package:creativa_courses_app/features/profile/Presentation/views/widgets/profile_container.dart';
@@ -62,6 +63,8 @@ class _ProfilePageState extends State<ProfilePage> {
                           buildAbout('I am mobile application developer interesting in ather programming fields such as back end, debugging, IOT, and AI.\n I have studied mobile application, Gaming, Data structure, and algorithm.')
                         ],*/
                       ),
+                      SubmitButton(text: "Edit Profile", onPressed: (){},
+                        color1:  blue.withOpacity(0.3),color2:  blue,)
                     ],
                   ),
                 ),

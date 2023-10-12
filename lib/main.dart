@@ -4,6 +4,8 @@ import 'package:creativa_courses_app/constants.dart';
 import 'package:creativa_courses_app/themes.dart';
 import 'package:flutter/material.dart';
 
+import 'Pages/splash_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
             ),*/
             theme: myTheme,
             title: 'Creativa Courses',
-            home: const CircularNavigationBar(),
+            home: const CustomSplashScreen(),
           );
         });
   }
