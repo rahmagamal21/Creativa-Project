@@ -1,4 +1,3 @@
-
 import 'package:creativa_courses_app/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -23,6 +22,7 @@ class _HomePageState extends State<HomePage> {
 
     return SafeArea(
       child: Scaffold(
+        extendBody: true,
         body: Padding(
           padding: const EdgeInsets.only(
             //bottom: size.height * 0.1,
@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                   height: size.height * 0.025,
                 ),
                 SizedBox(
-                  height: size.height * 0.38,
+                  height: size.height * 0.4,
                   child: ListView.builder(
                     padding: EdgeInsets.zero,
                     shrinkWrap: true,
@@ -79,7 +79,8 @@ class _HomePageState extends State<HomePage> {
                     scrollDirection: Axis.horizontal,
                     itemBuilder: ((context, index) {
                       return Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16 , vertical: 16),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 16),
                         child: CoursesContainer(
                           index: index,
                         ),

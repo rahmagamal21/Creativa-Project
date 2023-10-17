@@ -23,6 +23,7 @@ class _ProfilePageState extends State<ProfilePage> {
         child: Builder(
           builder: ((context) {
             return Scaffold(
+              extendBody: true,
               //backgroundColor: blue,
               appBar: buildAppBar(context),
               body: Padding(
@@ -63,8 +64,12 @@ class _ProfilePageState extends State<ProfilePage> {
                           buildAbout('I am mobile application developer interesting in ather programming fields such as back end, debugging, IOT, and AI.\n I have studied mobile application, Gaming, Data structure, and algorithm.')
                         ],*/
                       ),
-                      SubmitButton(text: "Edit Profile", onPressed: (){},
-                        color1:  blue.withOpacity(0.3),color2:  blue,)
+                      SubmitButton(
+                        text: "Edit Profile",
+                        onPressed: () {},
+                        color1: blue.withOpacity(0.3),
+                        color2: blue,
+                      )
                     ],
                   ),
                 ),
