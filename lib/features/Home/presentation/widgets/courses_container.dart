@@ -25,12 +25,12 @@ class CoursesContainer extends StatelessWidget {
         //showCourseDetails(context, index);
       },
       child: AspectRatio(
-        aspectRatio: 0.7,
+        aspectRatio: 0.75,
         child: Material(
           borderRadius: BorderRadius.circular(16),
           elevation: 8,
           child: Container(
-            padding: const EdgeInsets.all(12),
+            //padding: const EdgeInsets.all(12),
             // width: 150,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
@@ -40,20 +40,23 @@ class CoursesContainer extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 //mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  // AspectRatio(
-                  //   aspectRatio: 2/2,
-                  //   child: Container(
-                  //     decoration: BoxDecoration(
-                  //       borderRadius: BorderRadius.circular(16),
-                  //       image: DecorationImage(
-                  //         fit: BoxFit.fill,
-                  //         image:
-                  //             AssetImage('assets/images/course${index + 1}.jpg'),
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
-                  Center(
+                  AspectRatio(
+                    aspectRatio: 2 / 2,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(16),
+                          topRight: Radius.circular(16),
+                        ),
+                        image: DecorationImage(
+                          fit: BoxFit.fill,
+                          image: AssetImage(
+                              'assets/images/course${index + 1}.jpg'),
+                        ),
+                      ),
+                    ),
+                  ),
+                  /*Center(
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(16),
                       child: Image.asset(
@@ -62,53 +65,64 @@ class CoursesContainer extends StatelessWidget {
                         width: 130,
                       ),
                     ),
-                  ),
+                  ),*/
                   const SizedBox(
                     height: 5,
                   ),
-                  Text(
-                    courseinfo[index]['Title']!,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 8,
                     ),
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  AutoSizeText(
-                    courseinfo[index]['Description']!,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      color: Colors.grey,
-                    ),
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        courseinfo[index]['Duration']!,
-                        style: const TextStyle(
-                          color: Colors.grey,
-                          fontSize: 10,
-                        ),
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          'Enroll',
-                          style: TextStyle(
-                            fontSize: 10,
-                            color: Colors.blue,
-                            decoration: TextDecoration.underline,
-                            decorationColor: Colors.blue,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          courseinfo[index]['Title']!,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
                           ),
                         ),
-                      )
-                    ],
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        AutoSizeText(
+                          courseinfo[index]['Description']!,
+                          style: const TextStyle(
+                            fontSize: 14,
+                            color: Colors.grey,
+                          ),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              courseinfo[index]['Duration']!,
+                              style: const TextStyle(
+                                color: Colors.grey,
+                                fontSize: 10,
+                              ),
+                            ),
+                            TextButton(
+                              onPressed: () {},
+                              child: const Text(
+                                'Enroll',
+                                style: TextStyle(
+                                  fontSize: 10,
+                                  color: Colors.blue,
+                                  decoration: TextDecoration.underline,
+                                  decorationColor: Colors.blue,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
+
                   // Padding(
                   //   padding: const EdgeInsets.only(
                   //     right: 4,

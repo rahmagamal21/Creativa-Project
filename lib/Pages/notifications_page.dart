@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../Widgets/notification_setting_widget.dart';
 
-
 class NotificationsPage extends StatelessWidget {
   const NotificationsPage({super.key});
 
@@ -34,15 +33,18 @@ class NotificationsPage extends StatelessWidget {
       false,
     ];
     return SafeArea(
-      child: ListView.builder(
-        itemCount: 6,
-        itemBuilder: (BuildContext context, int index) {
-          return NotificationsSettingsElement(
-              size: size,
-              title: title[index],
-              subTitle: subTitle[index],
-              checkBox: checkBox[index]);
-        },
+      child: Scaffold(
+        extendBody: true,
+        body: ListView.builder(
+          itemCount: 6,
+          itemBuilder: (BuildContext context, int index) {
+            return NotificationsSettingsElement(
+                size: size,
+                title: title[index],
+                subTitle: subTitle[index],
+                checkBox: checkBox[index]);
+          },
+        ),
       ),
     );
   }
