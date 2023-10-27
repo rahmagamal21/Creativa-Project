@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import '../constants.dart';
 
@@ -21,9 +22,10 @@ class NotificationsSettingsElement extends StatefulWidget {
 class _NotificationsSettingsElementState
     extends State<NotificationsSettingsElement> {
   bool isChecked = false;
-  Color? fillcolor = blue;
+  Color? fillColor = blue;
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal:12 , vertical:8),
       child: Row(
@@ -45,11 +47,16 @@ class _NotificationsSettingsElementState
               const SizedBox(
                 height: 12,
               ),
-              Text(
-                widget.subTitle,
-                style: const TextStyle(
-                  fontSize: 15,
-                  color: Colors.grey,
+              SizedBox(
+                width:size.width*0.75 ,
+                child: Text(
+                  widget.subTitle,
+                  style: const TextStyle(
+                    fontSize: 15,
+                    color: Colors.grey,
+                  ),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
             ],

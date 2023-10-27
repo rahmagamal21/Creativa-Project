@@ -16,8 +16,7 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
-    //var size = MediaQuery.of(context).size;
-
+    var size = MediaQuery.of(context).size;
     return SafeArea(
       child: ThemeSwitchingArea(
         child: Builder(
@@ -64,11 +63,15 @@ class _ProfilePageState extends State<ProfilePage> {
                           buildAbout('I am mobile application developer interesting in ather programming fields such as back end, debugging, IOT, and AI.\n I have studied mobile application, Gaming, Data structure, and algorithm.')
                         ],*/
                       ),
-                      SubmitButton(
-                        text: "Edit Profile",
-                        onPressed: () {},
-                        color1: blue.withOpacity(0.3),
-                        color2: blue,
+                      Padding(
+                        padding: const EdgeInsets.only(bottom:20 , top: 8),
+                        child: SubmitButton(
+                          width:size.width*0.8  ,
+                          text: "Edit Profile",
+                          onPressed: () {},
+                          color1: blue.withOpacity(0.3),
+                          color2: blue,
+                        ),
                       )
                     ],
                   ),

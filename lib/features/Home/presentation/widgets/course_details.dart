@@ -58,43 +58,53 @@ class CourseDetails {
     return showDialog(
       context: context,
       builder: (context) {
-        return AlertDialog(
-          title: Text(
-            courseinfo[index]['Title']!,
-            textAlign: TextAlign.center,
-          ),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(
-                constraints: BoxConstraints(
-                  maxHeight: size.height * 0.4,
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage('assets/images/course${index + 1}.jpg'),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Text(
-                courseinfo[index]['Description']!,
+        return Column(
+          children: [
+            AlertDialog(
+              
+              title: Text(
+                courseInfo[index]['Title']!,
                 textAlign: TextAlign.center,
               ),
-            ],
-          ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context, 'CANCEL'),
-              child: const Text('CANCEL'),
-            ),
-            TextButton(
-              onPressed: () => Navigator.pop(context, 'ENROLL'),
-              child: const Text('ENROLL'),
+              content: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    constraints: BoxConstraints(
+                      maxHeight: size.height * 0.4,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage('assets/images/course${index + 1}.jpg'),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  SizedBox(
+                    height: size.height*0.2,
+                    child: SingleChildScrollView(
+                      child: Text(
+                        courseInfo[index]['Description']!,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.pop(context, 'CANCEL'),
+                  child: const Text('CANCEL'),
+                ),
+                TextButton(
+                  onPressed: () => Navigator.pop(context, 'ENROLL'),
+                  child: const Text('ENROLL'),
+                ),
+              ],
             ),
           ],
         );
@@ -156,10 +166,6 @@ class CourseDetails {
         });
   }
 }*/
-
-
-
-
 
 /*class CourseDetails {
   static Future<dynamic> showCourseDetails(BuildContext context, int index) {

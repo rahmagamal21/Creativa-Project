@@ -11,6 +11,7 @@ class SignUp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
         backgroundColor: blue,
@@ -55,6 +56,7 @@ class SignUp extends StatelessWidget {
                   height: 40,
                 ),
                 SubmitButton(
+                  width:size.width*0.8  ,
                   text: 'SIGN UP',
                   onPressed: () {},
                   color1: amber,

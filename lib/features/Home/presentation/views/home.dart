@@ -38,7 +38,9 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   height: size.height * 0.03,
                 ),
-                const SearchField(),
+                 SearchField(
+                  width: size.width*0.9,
+                ),
                 SizedBox(
                   height: size.height * 0.02,
                 ),
@@ -75,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                   child: ListView.builder(
                     padding: EdgeInsets.zero,
                     shrinkWrap: true,
-                    itemCount: courseinfo.length,
+                    itemCount: courseInfo.length,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: ((context, index) {
                       return Padding(

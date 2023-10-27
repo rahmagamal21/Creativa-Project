@@ -20,9 +20,9 @@ class NotificationsPage extends StatelessWidget {
       '60 minutes',
       'choose the notification sound',
       'play sound even in silent mode',
-      'vibrate even if vibration mode is not enaled',
-      'medicine reminder',
-      'don\'t forget to take the medicine',
+      'vibrate even if vibration mode is not enabled ',
+      'course title',
+      'course description',
     ];
     List<bool> checkBox = [
       false,
@@ -34,16 +34,20 @@ class NotificationsPage extends StatelessWidget {
     ];
     return SafeArea(
       child: Scaffold(
-        extendBody: true,
-        body: ListView.builder(
-          itemCount: 6,
-          itemBuilder: (BuildContext context, int index) {
-            return NotificationsSettingsElement(
-                size: size,
-                title: title[index],
-                subTitle: subTitle[index],
-                checkBox: checkBox[index]);
-          },
+        //extendBody: true,
+        body: SingleChildScrollView(
+          child: ListView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            itemCount: 6,
+            itemBuilder: (BuildContext context, int index) {
+              return NotificationsSettingsElement(
+                  size: size,
+                  title: title[index],
+                  subTitle: subTitle[index],
+                  checkBox: checkBox[index]);
+            },
+          ),
         ),
       ),
     );

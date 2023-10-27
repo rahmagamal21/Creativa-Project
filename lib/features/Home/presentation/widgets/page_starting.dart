@@ -37,9 +37,10 @@ class PageStarting extends StatelessWidget {
           ],
         ),
         Image.asset(
-          'assets/images/side icon1.png',
-          height:45,
-          width:45,
+          'assets/images/Logo2.png',
+          height:80,
+          width:80
+          ,
         ),
       ],
     );

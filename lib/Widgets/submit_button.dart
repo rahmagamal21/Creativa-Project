@@ -6,12 +6,13 @@ class SubmitButton extends StatelessWidget {
       required this.text,
       required this.onPressed,
       required this.color1,
-      required this.color2})
+      required this.color2,  required this.width})
       : super(key: key);
   final String text;
   final void Function()? onPressed;
   final Color color1;
   final Color color2;
+  final  double width;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,8 +23,7 @@ class SubmitButton extends StatelessWidget {
             end: Alignment.topRight,
             colors: [color1, color2],
           )),
-      width: 280,
-      height: 45,
+      width: width,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.transparent,

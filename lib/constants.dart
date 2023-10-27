@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
-bool isDarkMode = false;
+
 
 
 Color blue = const Color(0xFF2467AB);
-Color textFieldGrey= const Color(0xffbbbeca);
-//const Color(0xff004e9e)
 Color amber = const Color(0xFFF8AF43);
 Color pink = const Color(0xffb41c84);
 
@@ -20,11 +18,13 @@ List<String> categories = [
   'Networks'
 ];
 
-List<Map<String, String>> courseinfo = [
+List<Map<String, String>> courseInfo = [
   {
     'Title': 'Front End',
     'Description':
-        'For all those interested in the field of programming and want to take an influential step in their professional lives.The program will help you learn the basics of Front-end Development',
+        'For all those interested in the field of programming and want to take an influential step in their professional lives.The program will help you learn the basics of Front-end Development'
+
+           ,
     'Duration': '20 days in 2 months'
   },
   {
