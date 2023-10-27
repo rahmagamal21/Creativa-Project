@@ -6,7 +6,8 @@ var radius = const BorderRadius.all(
 );
 
 class SearchField extends StatelessWidget {
-  const SearchField({super.key});
+  const SearchField({super.key, required this.width});
+  final double width;
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +15,7 @@ class SearchField extends StatelessWidget {
       borderRadius: radius,
       elevation: 5,
       child: SizedBox(
+        width:width ,
         height: 45,
         child: TextFormField(
           decoration: InputDecoration(
