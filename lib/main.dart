@@ -1,8 +1,6 @@
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:creativa_courses_app/themes.dart';
 import 'package:flutter/material.dart';
-
-import 'Pages/login_page.dart';
 import 'Pages/splash_screen.dart';
 
 void main() {
@@ -14,14 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ThemeProvider(
-        initTheme:MyThemes.lightTheme,
+        initTheme: MyThemes.lightTheme,
         builder: (context, myTheme) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: myTheme,
             title: 'Creativa Courses',
             home: const CustomSplashScreen(),
-
           );
         });
   }

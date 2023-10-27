@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import '../constants.dart';
 
@@ -27,7 +26,7 @@ class _NotificationsSettingsElementState
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal:12 , vertical:8),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -48,7 +47,7 @@ class _NotificationsSettingsElementState
                 height: 12,
               ),
               SizedBox(
-                width:size.width*0.75 ,
+                width: size.width * 0.75,
                 child: Text(
                   widget.subTitle,
                   style: const TextStyle(
@@ -63,10 +62,8 @@ class _NotificationsSettingsElementState
           ),
           if (widget.checkBox)
             Checkbox(
-              side: const BorderSide(
-                  width:1.5
-                    ),
-                checkColor:Colors.white,
+                side: const BorderSide(width: 1.5),
+                checkColor: Colors.white,
                 activeColor: blue,
                 value: isChecked,
                 onChanged: (bool? valueKey) {
@@ -78,5 +75,4 @@ class _NotificationsSettingsElementState
       ),
     );
   }
-
 }
