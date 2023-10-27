@@ -15,7 +15,8 @@ class CustomSplashScreen extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Image.asset('assets/images/Logo.png'),
       ),
-      nextScreen: const LoginScreen(),
+      nextScreen: const
+      LoginScreen(),
       splashIconSize: 400,
       splashTransition: SplashTransition.fadeTransition,
       //for the fadeTransition ( splashTransition ) duration

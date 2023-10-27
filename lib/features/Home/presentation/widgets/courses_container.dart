@@ -35,13 +35,12 @@ class CoursesContainer extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
             ),
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                //mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              //mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
                   AspectRatio(
-                    aspectRatio: 2 / 2,
+                    aspectRatio: 0.8/0.65,
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: const BorderRadius.only(
@@ -56,95 +55,94 @@ class CoursesContainer extends StatelessWidget {
                       ),
                     ),
                   ),
-                  /*Center(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(16),
-                      child: Image.asset(
-                        'assets/images/course${index + 1}.jpg',
-                        height: 130,
-                        width: 130,
-                      ),
-                    ),
-                  ),*/
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      left: 8,
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          courseinfo[index]['Title']!,
-                          style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        AutoSizeText(
-                          courseinfo[index]['Description']!,
-                          style: const TextStyle(
-                            fontSize: 14,
-                            color: Colors.grey,
-                          ),
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              courseinfo[index]['Duration']!,
-                              style: const TextStyle(
-                                color: Colors.grey,
-                                fontSize: 10,
-                              ),
-                            ),
-                            TextButton(
-                              onPressed: () {},
-                              child: const Text(
-                                'Enroll',
-                                style: TextStyle(
-                                  fontSize: 10,
-                                  color: Colors.blue,
-                                  decoration: TextDecoration.underline,
-                                  decorationColor: Colors.blue,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
 
-                  // Padding(
-                  //   padding: const EdgeInsets.only(
-                  //     right: 4,
-                  //     left: 4,
-                  //     top: 7,
-                  //   ),
-                  //   child: Column(
-                  //    // crossAxisAlignment: CrossAxisAlignment.start,
-                  //     //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  //     children: [
-                  //
-                  //     ],
-                  //   ),
-                  // ),
-                ],
-              ),
+                /*Center(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(16),
+                    child: Image.asset(
+                      'assets/images/course${index + 1}.jpg',
+                      height: 130,
+                      width: 130,
+                    ),
+                  ),
+                ),*/
+                const SizedBox(
+                  height: 5,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 8,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        courseInfo[index]['Title']!,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      AutoSizeText(
+                        courseInfo[index]['Description']!,
+                        style: const TextStyle(
+                          fontSize: 14,
+                          color: Colors.grey,
+                        ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            courseInfo[index]['Duration']!,
+                            style: const TextStyle(
+                              color: Colors.grey,
+                              fontSize: 10,
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () {},
+                            child: const Text(
+                              'Enroll',
+                              style: TextStyle(
+                                fontSize: 10,
+                                color: Colors.blue,
+                                decoration: TextDecoration.underline,
+                                decorationColor: Colors.blue,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+
+                // Padding(
+                //   padding: const EdgeInsets.only(
+                //     right: 4,
+                //     left: 4,
+                //     top: 7,
+                //   ),
+                //   child: Column(
+                //    // crossAxisAlignment: CrossAxisAlignment.start,
+                //     //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                //     children: [
+                //
+                //     ],
+                //   ),
+                // ),
+              ],
             ),
           ),
         ),
       ),
     );
-    /*;*/
     /*Column(
       children: [
         Material(
@@ -254,12 +252,12 @@ class CoursesContainer extends StatelessWidget {
             builder: (BuildContext context) {
               return AlertDialog(
                 title: Text(
-                  courseinfo[index]['Title']!,
+                  courseInfo[index]['Title']!,
                   textAlign: TextAlign.center,
                 ),
                 content: Builder(builder: (context) {
                   return AutoSizeText(
-                    courseinfo[index]['Description']!,
+                    courseInfo[index]['Description']!,
                     textAlign: TextAlign.center,
                   );
                 }),
