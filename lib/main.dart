@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             theme: myTheme,
             title: 'Creativa Courses',
-            home: const CustomSplashScreen(),
+            home: const SplashScreen(),
           );
         });
   }
