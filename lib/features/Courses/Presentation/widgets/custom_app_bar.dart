@@ -39,7 +39,7 @@ class CustomAppBar extends StatelessWidget {
                           onPressed: () {},
                           style: ButtonStyle(
                               backgroundColor:
-                                  MaterialStateProperty.all<Color>(blue)),
+                                  WidgetStateProperty.all<Color>(blue)),
                           child: const Text('Join'),
                         )
                       ],
